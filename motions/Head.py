@@ -1,6 +1,5 @@
 import sys
 from random import uniform
-sys.path.append("C:\Users\ethan\Downloads\pynaoqi-python2.7-2.8.6.23-win64-vs2015-20191127_152649\pynaoqi-python2.7-2.8.6.23-win64-vs2015-20191127_152649\lib")
 from naoqi import *
 
 def StiffnessOn(proxy):
