@@ -67,6 +67,4 @@ def main(robotIP):
     postureProxy.goToPosture("Stand", 0.5)
 
 if __name__ == "__main__":
-    robotIp = "nao.local."
-
-    main(robotIp)
+    main(sys.argv[1])

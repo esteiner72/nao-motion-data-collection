@@ -43,6 +43,4 @@ def main(robotIP):
     postureProxy.goToPosture("Stand", 0.5)
 
 if __name__ == "__main__":
-    robotIp = "127.0.0.1"
-
-    main(robotIp)
+    main(sys.argv[1])
