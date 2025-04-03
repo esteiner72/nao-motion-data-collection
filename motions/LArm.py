@@ -3,7 +3,6 @@ from random import uniform
 from naoqi import *
 
 def StiffnessOn(proxy):
-
   pNames = "Body"
   pStiffnessLists = 1.0
   pTimeLists = 1.0
