@@ -1,9 +1,9 @@
 import json
 from naoqi import ALProxy
 
-robot_ip = "127.0.0.1"
-port = 9559
-json_file_path = "tasks/task_1.json"
+ROBOT_IP = "127.0.0.1"
+PORT = 9559
+JSON_FILE_PATH = "tasks/task_1.json"
 
 joints = [
     "HeadYaw", "HeadPitch", "LShoulderPitch", "LShoulderRoll", 
@@ -13,9 +13,9 @@ joints = [
     "RHipPitch", "RKneePitch"
 ]
 
-motion = ALProxy("ALMotion", robot_ip, port)
+motion = ALProxy("ALMotion", ROBOT_IP, PORT)
 
-with open(json_file_path, "r") as f:
+with open(JSON_FILE_PATH, "r") as f:
     motion_data = json.load(f)
 
 motion_data.sort(key=lambda x: x["timestamp"])

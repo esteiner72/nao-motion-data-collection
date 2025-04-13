@@ -4,11 +4,13 @@ from naoqi import *
 import time
 import json
 
+TASK_NAME = "task_1"
+
 def StiffnessOn(proxy):
-  pNames = "Body"
-  pStiffnessLists = 1.0
-  pTimeLists = 1.0
-  proxy.stiffnessInterpolation(pNames, pStiffnessLists, pTimeLists)
+    pNames = "Body"
+    pStiffnessLists = 1.0
+    pTimeLists = 1.0
+    proxy.stiffnessInterpolation(pNames, pStiffnessLists, pTimeLists)
 
 def main(robotIP):
 
@@ -61,7 +63,7 @@ def main(robotIP):
         if not motionProxy.isRunning(motion_1):
             break
 
-    with open("tasks/task_1.json", "w") as f:
+    with open("temp_data/{}.json".format(TASK_NAME), "w") as f:
         # avoid 0 timestamp
         del data[0]
         json.dump(data, f)
